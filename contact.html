@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt | Amdrix</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="logo-wrap">
+          <a href="index.html">
+            <img src="media/logo2.png" alt="Amdrix Logo" class="logo" />
+          </a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
+          ☰
+        </button>
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="index.html#about">Über uns</a></li>
+          <li><a href="hauswartung.html">Hauswartung</a></li>
+          <li><a href="reinigung.html">Reinigung</a></li>
+          <li><a href="contact.html" class="active">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-page section">
+    <div class="container">
+      <div class="contact-page-header reveal reveal-zoom">
+        <span class="section-tag">KONTAKT</span>
+        <h1>Nehmen Sie Kontakt mit uns auf</h1>
+        <p>
+          Gerne beraten wir Sie persönlich und erstellen Ihnen eine
+          unverbindliche Offerte für Reinigung oder Hauswartung im Kanton Bern.
+        </p>
+      </div>
+
+      <div class="contact-page-grid">
+        <!-- LEFT -->
+        <div class="contact-form-wrap reveal reveal-left">
+          <h2>Kontaktformular</h2>
+
+          <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-Mail-Adresse *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefon</label>
+              <input type="text" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="service">Dienstleistung *</label>
+              <select id="service" name="service" required>
+                <option value="">Bitte wählen</option>
+                <option value="hauswartung">Hauswartung</option>
+                <option value="reinigung">Reinigung</option>
+                <option value="beides">Hauswartung & Reinigung</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Nachricht *</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Anfrage senden</button>
+          </form>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="contact-map-wrap reveal reveal-right">
+          <h2>Standort</h2>
+
+          <div class="map-box">
+            <iframe
+              src="https://www.google.com/maps?q=Kasparstrasse%2017,%203027%20Bern&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="contact-side-note">
+            <p>
+              Wir sind im Kanton Bern tätig und freuen uns auf Ihre Anfrage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-info-section">
+    <div class="container">
+      <div class="contact-info-grid">
+        <div class="info-card reveal reveal-up">
+          <div class="info-icon">📍</div>
+          <h3>Adresse</h3>
+          <p>Kasparstrasse 17</p>
+          <p>3027 Bern</p>
+        </div>
+
+        <div class="info-card reveal reveal-up delay-1">
+          <div class="info-icon">📞</div>
+          <h3>Kontakt</h3>
+          <p><a href="tel:+410774826682">077 482 66 82</a></p>
+          <p><a href="mailto:info@amdrix.ch">info@amdrix.ch</a></p>
+        </div>
+
+        <div class="info-card reveal reveal-up delay-2">
+          <div class="info-icon">🕒</div>
+          <h3>Öffnungszeiten</h3>
+          <p>Montag - Freitag: 08:00 - 20:00</p>
+          <p>Samstag: 08:00 - 17:00</p>
+          <p>Sonntag: geschlossen</p>
+        </div>
+
+        <div class="info-card reveal reveal-up delay-2">
+          <div class="info-icon">🌐</div>
+          <h3>Social Media</h3>
+          <div class="socials social-contact">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="TikTok">TT</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="#">Legal notice</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms and conditions</a>
+      </div>
+      <p>© 2026 Amdrix, All rights reserved. Powered by <b>Pro Code Revolution</b></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
