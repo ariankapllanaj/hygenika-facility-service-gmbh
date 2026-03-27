@@ -16,6 +16,28 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+<?php
+$status = $_GET['status'] ?? '';
+?>
+
+<?php if ($status === 'success'): ?>
+  <div class="form-alert success">
+    Ihre Nachricht wurde erfolgreich gesendet.
+  </div>
+<?php elseif ($status === 'error'): ?>
+  <div class="form-alert error">
+    Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.
+  </div>
+<?php elseif ($status === 'invalid'): ?>
+  <div class="form-alert error">
+    Bitte füllen Sie alle Pflichtfelder korrekt aus.
+  </div>
+<?php elseif ($status === 'spam'): ?>
+  <div class="form-alert error">
+    Spam-Verdacht erkannt.
+  </div>
+<?php endif; ?>
+
 <body>
 
   <header class="site-header">
@@ -60,7 +82,7 @@
         <div class="contact-form-wrap reveal reveal-left">
           <h2>Kontaktformular</h2>
 
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form" action="send-mail.php" method="POST">
             <div class="form-group">
               <label for="name">Name *</label>
               <input type="text" id="name" name="name" required />
@@ -80,9 +102,9 @@
               <label for="service">Dienstleistung *</label>
               <select id="service" name="service" required>
                 <option value="">Bitte wählen</option>
-                <option value="hauswartung">Hauswartung</option>
-                <option value="reinigung">Reinigung</option>
-                <option value="beides">Hauswartung & Reinigung</option>
+                <option value="Hauswartung">Hauswartung</option>
+                <option value="Reinigung">Reinigung</option>
+                <option value="Hauswartung & Reinigung">Hauswartung & Reinigung</option>
               </select>
             </div>
 
@@ -90,6 +112,9 @@
               <label for="message">Nachricht *</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
+
+            <!-- honeypot anti-spam -->
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
 
             <button type="submit" class="btn-primary">Anfrage senden</button>
           </form>

@@ -1124,3 +1124,22 @@ p {
     height: 260px;
   }
 }
+
+.form-alert {
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.form-alert.success {
+  background: rgba(0, 180, 90, 0.12);
+  color: #8ff0b5;
+  border: 1px solid rgba(0, 180, 90, 0.35);
+}
+
+.form-alert.error {
+  background: rgba(255, 0, 0, 0.10);
+  color: #ffb3b3;
+  border: 1px solid rgba(255, 0, 0, 0.30);
+}
