@@ -1143,3 +1143,151 @@ p {
   color: #ffb3b3;
   border: 1px solid rgba(255, 0, 0, 0.30);
 }
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+  background: #050505;
+}
+
+.about-page-header {
+  max-width: 920px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.about-page-header h1 {
+  color: #fff;
+  font-size: clamp(2.4rem, 5vw, 4.3rem);
+  line-height: 1.05;
+}
+
+.about-page-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.about-page-image {
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 680px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.about-page-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.about-page-image:hover img {
+  transform: scale(1.05);
+}
+
+.about-page-content {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 38px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+}
+
+.about-page-content h2 {
+  color: #fff;
+  margin-bottom: 24px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.about-page-content h3 {
+  color: #fff;
+  margin: 34px 0 18px;
+  font-size: 1.55rem;
+}
+
+.about-page-content p {
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 18px;
+  font-size: 1.02rem;
+}
+
+.about-page-highlight {
+  margin: 34px 0;
+  padding: 24px 26px;
+  background: #0a0a0a;
+  border-left: 4px solid red;
+  border-radius: 16px;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.25;
+  box-shadow: 0 14px 35px rgba(255, 0, 0, 0.08);
+}
+
+.about-page-values {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.about-page-values li {
+  position: relative;
+  color: rgba(255, 255, 255, 0.86);
+  padding-left: 32px;
+  font-size: 1rem;
+}
+
+.about-page-values li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  color: red;
+  font-weight: 800;
+}
+
+@media (max-width: 992px) {
+  .about-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page-image,
+  .about-page-image img {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page-header {
+    margin-bottom: 40px;
+  }
+
+  .about-page-content {
+    padding: 26px 22px;
+  }
+
+  .about-page-image,
+  .about-page-image img {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-page-content {
+    padding: 22px 18px;
+  }
+
+  .about-page-image,
+  .about-page-image img {
+    min-height: 300px;
+  }
+}
