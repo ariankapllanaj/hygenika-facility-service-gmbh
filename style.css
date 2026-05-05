@@ -1257,7 +1257,7 @@ p {
   }
 
   .about-page-image {
-    height: 660px; /* ishte 380px → tani më e madhe */
+    height: 660px;
   }
 }
 
@@ -1271,7 +1271,7 @@ p {
   }
 
   .about-page-image {
-    height: 620px; /* ishte 340px */
+    height: 620px;
   }
 }
 
@@ -1285,6 +1285,6 @@ p {
   }
 
   .about-page-image {
-    height: 350px; /* ishte 260px */
+    height: 350px;
   }
 }
