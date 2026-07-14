@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,11 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -22,7 +23,11 @@
       <div class="header-top">
         <div class="logo-wrap">
           <a href="index.html">
-            <img src="media/logo2.png" alt="Hygenika Logo" class="logo" />
+            <picture>
+              <source media="(max-width: 768px)" srcset="media/logo_zoom.png">
+
+              <img src="media/logo2.png" alt="Hygenika Logo" class="logo">
+            </picture>
           </a>
         </div>
 
@@ -197,9 +202,9 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-links">
-      <a href="#">Impressum</a>
-      <a href="#">Datenschutzerklärung</a>
-      <a href="#">Allgemeine Geschäftsbedingungen</a>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutzerklärung</a>
+        <a href="#">Allgemeine Geschäftsbedingungen</a>
       </div>
       <p>© 2026 Hygenika Facility Service GmbH. Alle Rechte vorbehalten. Website erstellt von <b>Arian Kapllanaj</b></p>
     </div>
@@ -207,4 +212,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
