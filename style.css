@@ -171,7 +171,7 @@ p {
 /* HERO */
 .hero {
   min-height: 78vh;
-  background: url("media/cleaning.jpg") center/cover no-repeat;
+  background: url("media/contact-form.jpeg") center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
