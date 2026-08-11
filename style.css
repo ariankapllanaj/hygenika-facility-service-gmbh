@@ -95,7 +95,7 @@ p {
 /* HEADER */
 .site-header {
   background: black;
-  padding: 28px 0 18px;
+  padding: 18px 0 14px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   position: sticky;
   top: 0;
@@ -113,12 +113,14 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .logo {
-  max-width: 55px;
+  width: 190px;
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
   transition: var(--transition);
 }
 
@@ -455,6 +457,10 @@ p {
 
 /* TABLET */
 @media (max-width: 992px) {
+  .logo {
+    width: 175px;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
@@ -489,7 +495,8 @@ p {
   }
 
   .logo {
-    max-width: 100px;
+    width: 165px;
+    max-width: 100%;
   }
 
   .menu-toggle {
@@ -599,7 +606,8 @@ p {
   }
 
   .logo {
-    max-width: 105px;
+    width: 145px;
+    max-width: 100%;
   }
 
   .menu-toggle {
